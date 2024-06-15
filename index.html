@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="shadow-sm border col-lg-6 m-auto p-2 mt-3">
+        <h2 class="text-center text-decoration-underline">MRWICKS's E-Commerce</h2>
+        <p class="alert alert-danger text-center" id="errorAlert">please fill in the empty spaces</p>
+        <input type="text" id="product" class="form-control mt-2 m-auto " placeholder="Enter todo">
+        <input type="text" id="productDes" class="form-control mt-2 m-auto " placeholder="Enter todo description">
+        <div class="button">
+            <button class="btn btn-border bg-dark text-light mt-3 w-100 btnbutton" onclick="addItems()"> Add Items</button>
+        </div>
+    </div>
+    <div class="col-lg-6 shadow-sm p-3 mx-auto mt-3" id="noItem"></div>
+    <div class="col-6 mx-auto mt-3 shadow-sm">
+        <div id="show" class="ms-3 d-flex gap-3 w-100 justify-content-center flex-wrap"></div>
+        <!-- <div class="row ms-2">
+            <div class="col-lg-3 col">
+                <button class="btn p-2 btn-sm btn-danger my-2 " onclick="delLast()">Delete Last</button>
+            </div>
+            <div class="col-lg-3 col">
+                <button class="btn p-2 btn-sm btn-success my-2  " onclick="delFirst()">Delete First</button>
+            </div>
+            <div class="col-lg-3 col">
+                <button class="btn p-2 btn-sm btn-warning my-2" onclick="delAny()">Delete Any</button>
+            </div>
+            <div class="col-lg-3 col">
+                <button class="btn p-2 btn-sm btn-info my-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add First</button>
+            </div>
+            <div class="col-lg-3 col">
+                <button class="btn p-2 btn-sm btn-secondary my-2" onclick="delAll()">Delete All</button>
+            </div>
+            <div class="col-lg-3 col">
+                <button class="btn p-2 btn-sm btn-dark my-2"  data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit Any</button>
+            </div>
+        </div> -->
+    </div>
+    
+
+
+            <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button> -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit your item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert alert-danger text-center" id="errorFirst">please fill in the empty spaces</p>
+                    <input type="text" id="FirstProduct" class="form-control mt-2 m-auto " placeholder="New Item">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="editItem()" >Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal Edit -->
+        <!-- <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert alert-danger text-center" id="errorEdit">please fill in the empty spaces</p>
+                    <input type="text" id="editProduct" class="form-control mt-2 m-auto " placeholder="Add your item">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addFirst()" >Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div> -->
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
